@@ -1,5 +1,4 @@
-from flask import Flask
-import time
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -8,14 +7,9 @@ app = Flask(__name__)
 def index():
     return 'This is the home page!'
 
-@app.route('/profile/<username>')
-def profile(username):
-    return username
-
-@app.route('/post/<int:id>')
-def show(id):
-    return str(id)
-
+@app.route('/profile/<name>')
+def profile(name):
+    return render_template('profile.html', name=name)
 
 if __name__ == '__main__':
     app.run(debug=True)
