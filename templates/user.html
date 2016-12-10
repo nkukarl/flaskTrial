@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>User</title>
-    <link rel="stylesheet" type="text/css"
-          href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     {% if user %}
-        <h1>Hello {{ user }}</h1>
+        <h1>Hello {{ user.name }}</h1>
+        <h2>Your age: {{ user.age }}</h2>
+        <h2>Your hobby:</h2>
+            <ul>
+                {% for hobby in user.hobbies %}
+                    <li>{{ hobby }}</li>
+                {% endfor %}
+            </ul>
     {% else %}
         <h1>Please log in...</h1>
     {% endif %}

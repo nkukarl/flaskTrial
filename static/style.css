@@ -1,3 +1,9 @@
 h1 {
-    color: deepskyblue;
+    color: black;
+}
+h2 {
+    color: mediumvioletred;
+}
+li {
+    color: cyan;
 }
