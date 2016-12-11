@@ -6,6 +6,15 @@
 </head>
 <body>
     <span id="about">HEAD</span>
+    <br/>
+    <button onclick="add(1)">+</button>
+    <button onclick="sub(1)">-</button>
+    <br/>
+    <button onclick="add(5)">+5</button>
+    <button onclick="sub(5)">-5</button>
+
+    <br/>
+    <span id="val">0</span>
     <script type="text/javascript" src="{{ url_for('static', filename='js/about.js') }}"></script>
 </body>
 </html>
