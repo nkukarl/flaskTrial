@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calc</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    <input type="text" size=5 name="a"> +
+    <input type="text" size=5 name="b"> =
+    <span id="result">?</span>
+
+    <br/>
+
+    <br/>
+    <button href=# id="calc">Calculate!</button>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
+    <script type="text/javascript">
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/calc.js') }}"></script>
+</body>
+</html>
