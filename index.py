@@ -12,5 +12,9 @@ def index(username=None):
         return render_template('user.html', user=user)
     return render_template('user.html', user=None)
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
