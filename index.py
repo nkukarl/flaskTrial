@@ -1,6 +1,6 @@
 from flask import Flask, render_template, jsonify, request
 from user.user import User
-from logic.calculate import func
+from logic.calculate import add2
 
 app = Flask(__name__)
 
@@ -21,7 +21,7 @@ def about():
 def _calc():
     a = request.args.get('a', 0, type=int)
     b = request.args.get('b', 0, type=int)
-    result = func(a, b)
+    result = add2(a, b)
     return jsonify(ans=result)
 
 @app.route('/calc')
