@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/table_info.css') }}">
+</head>
+<body>
+    <h1>Info</h1>
+    <button id="show">Show</button>
+
+    <br/>
+
+    <table id="table"></table>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
+    <script type="text/javascript">
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/info.js') }}"></script>
+</body>
+</html>

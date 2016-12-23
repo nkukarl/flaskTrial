@@ -1,0 +1,15 @@
+table {
+    background-color: cyan;
+}
+
+table th {
+    font-family: Arial;
+}
+
+caption {
+    font-size: 2em;
+}
+
+.hidden {
+    visibility: hidden;
+}
