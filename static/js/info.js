@@ -9,6 +9,12 @@ $(function() {
 });
 
 render_table = (table_info) => {
+
+    let table = document.getElementById('table');
+    while (table.firstChild) {
+        table.removeChild(table.firstChild);
+    }
+
     const data = table_info.data;
 
     if (data[0]) {
@@ -38,7 +44,11 @@ render_table = (table_info) => {
             let dt = data[i];
             let row = document.createElement('tr');
             row.id = 'holding_details_row_' + i.toString();
-            row.appendChild(document.createElement('button'));
+            del_button = document.createElement('button');
+            del_button.innerHTML = 'Remove';
+            del_button.className = 'del_btn';
+            row.appendChild(del_button);
+
             keys.forEach((key) => {
                 let cell = document.createElement('td');
                 cell.className = key;
