@@ -1,7 +1,7 @@
 from flask import Flask, render_template, jsonify, request
 from user.user import User
 from logic.calculate import add2
-from logic.information import get_table_info
+from logic.information import get_table_info, remove_holding
 
 app = Flask(__name__)
 
