@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Info</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/table_info.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jquery.dataTables.min.css') }}">
 </head>
 <body>
     <h1>Info</h1>
@@ -11,9 +11,10 @@
 
     <br/>
 
-    <table id="table"></table>
+    <table id="holding_info" width="100%"></table>
 
     <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.1.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.dataTables.min.js') }}"></script>
     <script type="text/javascript">
         $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
     </script>
