@@ -41,6 +41,9 @@ def _info():
 def info():
     return render_template('info.html')
 
+@app.route('/learn_jquery')
+def learn_jquery():
+    return render_template('learn_jquery.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
