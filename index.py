@@ -45,5 +45,9 @@ def info():
 def learn_jquery():
     return render_template('learn_jquery.html')
 
+@app.route('/learn_bootstrap')
+def learn_bootstrap():
+    return render_template('learn_bootstrap.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
